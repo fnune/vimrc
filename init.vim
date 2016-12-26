@@ -1,6 +1,6 @@
 call plug#begin()
 
-Plug 'benekastah/neomake'
+Plug 'w0rp/ale'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -63,16 +63,18 @@ set secure
 let g:netrw_disthistmax=0
 
 " Plugin-specific configuration
+" Deoplete
 let g:deoplete#enable_at_startup=1
-" Open NERDTree if I opened a directory
+" NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+" Async Linting Engine
+let g:ale_sign_column_always=1
+let g:ale_sign_error = '|>'
+let g:ale_sign_warning = '|>'
 
 " JavaScript
 let g:jsx_ext_required = 0
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_javascript_jsx_enabled_makers = ['eslint']
-autocmd! BufWritePost *.js Neomake
 
 " Keybindings
 let mapleader=","
