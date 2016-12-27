@@ -10,6 +10,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'justinmk/vim-sneak'
 Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/neoinclude.vim'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
 Plug 'JulesWang/css.vim'
@@ -61,10 +62,13 @@ set scroll=5
 set exrc
 set secure
 let g:netrw_disthistmax=0
+set backupcopy=yes
+set autoread
 
 " Plugin-specific configuration
 " Deoplete
 let g:deoplete#enable_at_startup=1
+let g:deoplete#file#enable_buffer_path=1
 " NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
