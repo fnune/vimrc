@@ -5,6 +5,8 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'ap/vim-css-color'
+Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -76,6 +78,8 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 let g:ale_sign_column_always=1
 let g:ale_sign_error = '|>'
 let g:ale_sign_warning = '|>'
+" Indent lines
+let g:indentLine_char = '|'
 
 " JavaScript
 let g:jsx_ext_required = 0
