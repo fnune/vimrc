@@ -80,6 +80,8 @@ let g:ale_sign_error = '|>'
 let g:ale_sign_warning = '|>'
 " Indent lines
 let g:indentLine_char = '|'
+" FZF - Use silversearcher, also ignores .gitignored files
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " JavaScript
 let g:jsx_ext_required = 0
