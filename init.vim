@@ -21,6 +21,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'ryanoasis/vim-devicons'
 
 " Language-specific
 Plug 'pangloss/vim-javascript'
@@ -34,10 +35,11 @@ syntax enable
 set termguicolors
 set laststatus=2
 colorscheme jellybeans
+set encoding=utf-8
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='distinguished'
-set encoding=utf-8
+autocmd FileType nerdtree setlocal nolist
 
 " Use the terminal background instead of theme background
 hi Normal ctermbg=NONE guibg=NONE
