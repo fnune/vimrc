@@ -20,7 +20,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'ryanoasis/vim-devicons'
 
 " Language-specific
 Plug 'pangloss/vim-javascript'
@@ -82,7 +81,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:jsx_ext_required = 0
 
 " Keybindings
-let mapleader=","
+let mapleader=" "
 
 nnoremap <Leader>git :Gstatus<CR>
 nnoremap <Leader>f :FZF<CR>
