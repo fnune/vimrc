@@ -7,7 +7,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'ap/vim-css-color'
 Plug 'whatyouhide/vim-gotham'
-Plug 'yuttie/comfortable-motion.vim'
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
