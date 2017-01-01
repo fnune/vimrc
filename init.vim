@@ -39,7 +39,6 @@ set encoding=utf-8
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 autocmd FileType nerdtree setlocal nolist
-hi link xmlEndTag xmlTag
 
 " Configuration
 set number
