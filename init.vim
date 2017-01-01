@@ -6,7 +6,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'ap/vim-css-color'
-Plug 'Yggdroot/indentLine'
 Plug 'whatyouhide/vim-gotham'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'tpope/vim-repeat'
@@ -35,16 +34,11 @@ call plug#end()
 syntax enable
 set termguicolors
 set laststatus=2
-colorscheme gotham
+colorscheme gotham256
 set encoding=utf-8
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='distinguished'
 autocmd FileType nerdtree setlocal nolist
-
-" Use the terminal background instead of theme background
-hi Normal ctermbg=NONE guibg=NONE
-hi NonText ctermbg=NONE guibg=NONE
 hi link xmlEndTag xmlTag
 
 " Configuration
@@ -52,6 +46,7 @@ set number
 filetype plugin indent on
 set showcmd
 set list
+set breakindent
 set textwidth=0
 set linebreak
 set tabstop=4
@@ -82,8 +77,6 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 let g:ale_sign_column_always=1
 let g:ale_sign_error = '|>'
 let g:ale_sign_warning = '|>'
-" Indent lines
-let g:indentLine_char = '|'
 " FZF - Use silversearcher, also ignores .gitignored files
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
