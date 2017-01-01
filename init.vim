@@ -7,6 +7,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'ap/vim-css-color'
 Plug 'Yggdroot/indentLine'
+Plug 'whatyouhide/vim-gotham'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
@@ -34,7 +35,7 @@ call plug#end()
 syntax enable
 set termguicolors
 set laststatus=2
-colorscheme jellybeans
+colorscheme gotham
 set encoding=utf-8
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
