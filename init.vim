@@ -4,6 +4,7 @@ Plug 'w0rp/ale'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
 Plug 'ap/vim-css-color'
 Plug 'whatyouhide/vim-gotham'
@@ -11,7 +12,6 @@ Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'justinmk/vim-sneak'
-Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
@@ -64,9 +64,6 @@ set backupcopy=yes
 set autoread
 
 " Plugin-specific configuration
-" Deoplete
-let g:deoplete#enable_at_startup=1
-let g:deoplete#file#enable_buffer_path=1
 " NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
