@@ -64,9 +64,6 @@ set backupcopy=yes
 set autoread
 
 " Plugin-specific configuration
-" NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 " Async Linting Engine
 let g:ale_sign_column_always=1
 let g:ale_sign_error = '|>'
