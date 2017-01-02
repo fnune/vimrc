@@ -48,6 +48,7 @@ set textwidth=0
 set linebreak
 set tabstop=4
 set shiftwidth=2
+set scrolloff=6
 set expandtab
 set lazyredraw
 set hlsearch
@@ -56,12 +57,16 @@ set showmatch
 set wildmenu
 set cursorline
 set ignorecase smartcase
-set scroll=5
 set exrc
 set secure
 let g:netrw_disthistmax=0
 set backupcopy=yes
 set autoread
+set autoindent
+set smartindent
+set wrap
+" Return to last edit position when opening files
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Plugin-specific configuration
 " Async Linting Engine
@@ -80,5 +85,13 @@ let mapleader=" "
 nnoremap <Leader>git :Gstatus<CR>
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>t :NERDTreeToggle<CR>
+nmap <leader>w :w!<cr>
 nnoremap j gj
 nnoremap k gk
+map 0 ^
+command W w !sudo tee % > /dev/null
+" Move a line of text using ALT+[jk]
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
