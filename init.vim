@@ -3,8 +3,8 @@ call plug#begin()
 Plug 'w0rp/ale'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
 Plug 'Valloric/YouCompleteMe'
+Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'ap/vim-css-color'
 Plug 'whatyouhide/vim-gotham'
@@ -75,6 +75,8 @@ let g:ale_sign_error = '|>'
 let g:ale_sign_warning = '|>'
 " FZF - Use silversearcher, also ignores .gitignored files
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" Padding for NERDCommenter
+let NERDSpaceDelims=1
 
 " JavaScript
 let g:jsx_ext_required = 0
