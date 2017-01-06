@@ -6,7 +6,6 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
-Plug 'ap/vim-css-color'
 Plug 'whatyouhide/vim-gotham'
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
@@ -15,7 +14,6 @@ Plug 'justinmk/vim-sneak'
 Plug 'Shougo/neoinclude.vim'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
-Plug 'JulesWang/css.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
@@ -23,8 +21,10 @@ Plug 'terryma/vim-multiple-cursors'
 
 " Language-specific
 Plug 'pangloss/vim-javascript'
+Plug 'ap/vim-css-color'
 Plug 'mxw/vim-jsx'
 Plug 'matchit.zip'
+Plug 'JulesWang/css.vim'
 
 call plug#end()
 
