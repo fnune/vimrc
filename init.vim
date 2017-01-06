@@ -53,6 +53,7 @@ set expandtab
 set lazyredraw
 set hlsearch
 set incsearch
+set nohlsearch
 set showmatch
 set wildmenu
 set cursorline
