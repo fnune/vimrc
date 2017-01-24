@@ -7,6 +7,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'whatyouhide/vim-gotham'
+Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -32,7 +33,8 @@ call plug#end()
 syntax enable
 set termguicolors
 set laststatus=2
-colorscheme gotham256
+colorscheme base16-default-dark
+hi link xmlEndTag xmlTag
 set encoding=utf-8
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
