@@ -80,6 +80,8 @@ let g:ale_sign_warning = '|>'
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 " Padding for NERDCommenter
 let NERDSpaceDelims=1
+" YouCompleteMe
+set completeopt-=preview
 
 " JavaScript
 let g:jsx_ext_required = 0
