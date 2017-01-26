@@ -11,6 +11,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'Shougo/neoinclude.vim'
 Plug 'mhinz/vim-signify'
@@ -78,8 +79,12 @@ let g:ale_sign_error = '|>'
 let g:ale_sign_warning = '|>'
 " FZF - Use silversearcher, also ignores .gitignored files
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+set grepprg=ag\ --vimgrep
 " Padding for NERDCommenter
 let NERDSpaceDelims=1
+" Navigate between linter errors with CTRL+[jk]
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " YouCompleteMe
 set completeopt-=preview
 
@@ -91,6 +96,7 @@ let mapleader=" "
 
 nnoremap <Leader>git :Gstatus<CR>
 nnoremap <Leader>f :FZF<CR>
+nnoremap <Leader>F :Ag 
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nmap <leader>w :w!<cr>
 nnoremap j gj
@@ -102,6 +108,3 @@ nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-" Navigate between linter errors with CTRL+[jk]
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
