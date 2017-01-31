@@ -107,3 +107,8 @@ nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+" Press F7 to run JS code on node and show it in a buffer
+map <F7> :call Run() <cr>
+function Run()
+  exec "! node %"
+endfunction
