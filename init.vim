@@ -19,6 +19,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'godlygeek/tabular'
 
 " Language-specific
 Plug 'pangloss/vim-javascript'
@@ -26,6 +27,9 @@ Plug 'ap/vim-css-color'
 Plug 'mxw/vim-jsx'
 Plug 'matchit.zip'
 Plug 'JulesWang/css.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
 
 call plug#end()
 
@@ -68,6 +72,7 @@ set autoread
 set autoindent
 set smartindent
 set wrap
+set directory=~/.local/share/nvim/swap
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
