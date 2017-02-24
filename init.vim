@@ -117,3 +117,5 @@ map <F7> :call Run() <cr>
 function Run()
   exec "! node %"
 endfunction
+" GD (uppercase) from an imported variable to go to the file that defines it
+nnoremap GF gd/'<CR>gf
