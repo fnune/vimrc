@@ -19,6 +19,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'godlygeek/tabular'
 
 " Language-specific
 Plug 'pangloss/vim-javascript'
@@ -27,6 +28,9 @@ Plug 'mxw/vim-jsx'
 Plug 'matchit.zip'
 Plug 'JulesWang/css.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
 
 call plug#end()
 
@@ -69,7 +73,8 @@ set autoread
 set autoindent
 set smartindent
 set wrap
-set directory=.,$TEMP
+set directory=~/.local/share/nvim/swap
+
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
@@ -117,3 +122,5 @@ map <F7> :call Run() <cr>
 function Run()
   exec "! node %"
 endfunction
+" GD (uppercase) from an imported variable to go to the file that defines it
+nnoremap GF gd/'<CR>gf
