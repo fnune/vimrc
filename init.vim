@@ -26,6 +26,7 @@ Plug 'ap/vim-css-color'
 Plug 'mxw/vim-jsx'
 Plug 'matchit.zip'
 Plug 'JulesWang/css.vim'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
 
@@ -68,6 +69,7 @@ set autoread
 set autoindent
 set smartindent
 set wrap
+set directory=.,$TEMP
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
@@ -86,6 +88,9 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " YouCompleteMe
 set completeopt-=preview
+" Markdown preview
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_github=1
 
 " JavaScript
 let g:jsx_ext_required = 0
