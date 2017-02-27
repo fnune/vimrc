@@ -31,6 +31,7 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
+Plug 'neovimhaskell/haskell-vim'
 
 call plug#end()
 
