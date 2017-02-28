@@ -83,8 +83,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Plugin-specific configuration
 " Async Linting Engine
 let g:ale_sign_column_always=1
-let g:ale_sign_error = '|>'
-let g:ale_sign_warning = '|>'
+let g:ale_sign_error = '*>'
+let g:ale_sign_warning = '*>'
 " FZF - Use silversearcher, also ignores .gitignored files
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 set grepprg=ag\ --vimgrep
