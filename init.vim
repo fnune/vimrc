@@ -74,8 +74,8 @@ set autoread
 set autoindent
 set smartindent
 set wrap
-set directory=~/.local/share/nvim/swap
 set splitright
+set splitbelow
 
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
