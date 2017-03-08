@@ -32,6 +32,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
