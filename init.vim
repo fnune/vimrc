@@ -110,7 +110,9 @@ nnoremap <Leader>git :Gstatus<CR>
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>F :Ag 
 nnoremap <Leader>t :NERDTreeToggle<CR>
-nmap <leader>w :w!<cr>
+nnoremap <Leader>wq :wq!<CR>
+nnoremap <Leader>q :q<CR>
+nmap <leader>w :w!<CR>
 nnoremap j gj
 nnoremap k gk
 map 0 ^
