@@ -33,6 +33,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'rust-lang/rust.vim'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -82,6 +83,13 @@ set splitbelow
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Plugin-specific configuration
+" Emmet for vim - jsx specifics
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\    'extends' : 'jsx',
+\    'quote_char': "'",
+\  },
+\}
 " rust.vim - Respect user configuration regarding indentation
 let g:rust_recommended_style = 0
 " Async Linting Engine
