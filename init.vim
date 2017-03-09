@@ -82,6 +82,8 @@ set splitbelow
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Plugin-specific configuration
+" rust.vim - Respect user configuration regarding indentation
+let g:rust_recommended_style = 0
 " Async Linting Engine
 let g:ale_sign_column_always=1
 let g:ale_sign_error = '*>'
