@@ -1,7 +1,6 @@
 call plug#begin()
 
 Plug 'w0rp/ale'
-Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --racer-completer --clang-completer' }
 Plug 'scrooloose/nerdcommenter'
