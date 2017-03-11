@@ -3,7 +3,7 @@ call plug#begin()
 Plug 'w0rp/ale'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --racer-completer --clang-completer' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'chriskempson/base16-vim'
@@ -111,6 +111,8 @@ set completeopt-=preview
 " Markdown preview
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
+" Required for YCM installation
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 " JavaScript
 let g:jsx_ext_required = 0
