@@ -90,8 +90,10 @@ let g:user_emmet_settings = {
 \    'quote_char': "'",
 \  },
 \}
-" rust.vim - Respect user configuration regarding indentation
-let g:rust_recommended_style = 0
+" Show four spaces as two in rust files to keep with standars
+" While keeping my eyes healthy
+autocmd Filetype rust setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 concealcursor=nvi conceallevel=1
+autocmd Filetype rust syntax match spaces /  / conceal cchar= " <- There is a space here!
 " Async Linting Engine
 let g:ale_sign_column_always=1
 let g:ale_sign_error = '*>'
