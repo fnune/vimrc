@@ -57,12 +57,11 @@ set textwidth=0
 set linebreak
 set tabstop=4
 set shiftwidth=2
+set hlsearch
 set scrolloff=6
 set expandtab
 set lazyredraw
-set hlsearch
 set incsearch
-set nohlsearch
 set showmatch
 set wildmenu
 set cursorline
@@ -125,6 +124,7 @@ nnoremap <Leader>F :Ag
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>wq :wq!<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>l :noh<CR>
 nmap <leader>w :w!<CR>
 nnoremap j gj
 nnoremap k gk
