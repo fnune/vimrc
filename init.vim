@@ -1,9 +1,8 @@
 call plug#begin()
 
 Plug 'w0rp/ale'
-Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --racer-completer --clang-completer' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'chriskempson/base16-vim'
@@ -58,12 +57,11 @@ set textwidth=0
 set linebreak
 set tabstop=4
 set shiftwidth=2
+set hlsearch
 set scrolloff=6
 set expandtab
 set lazyredraw
-set hlsearch
 set incsearch
-set nohlsearch
 set showmatch
 set wildmenu
 set cursorline
@@ -111,6 +109,8 @@ set completeopt-=preview
 " Markdown preview
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
+" Required for YCM installation
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 " JavaScript
 let g:jsx_ext_required = 0
@@ -125,6 +125,7 @@ nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>T :NERDTreeFind<CR>
 nnoremap <Leader>wq :wq!<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>l :noh<CR>
 nmap <leader>w :w!<CR>
 nnoremap j gj
 nnoremap k gk
