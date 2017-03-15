@@ -88,14 +88,11 @@ let g:user_emmet_settings = {
 \    'quote_char': "'",
 \  },
 \}
-" Show four spaces as two in rust files to keep with standars
-" While keeping my eyes healthy
-autocmd Filetype rust setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 concealcursor=nvi conceallevel=1
-autocmd Filetype rust syntax match spaces /  / conceal cchar= " <- There is a space here!
 " Async Linting Engine
 let g:ale_sign_column_always=1
 let g:ale_sign_error = '*>'
 let g:ale_sign_warning = '*>'
+let g:ale_linters = {'rust': ['rustc']}
 " FZF - Use silversearcher, also ignores .gitignored files
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 set grepprg=ag\ --vimgrep
@@ -142,4 +139,4 @@ function Run()
   exec "! node %"
 endfunction
 " GD (uppercase) from an imported variable to go to the file that defines it
-nnoremap GF gd/'<CR>gf
+nnoremap GF gd/'<CR>:noh<CR>gf
