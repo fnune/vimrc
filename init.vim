@@ -119,9 +119,9 @@ nnoremap <Leader>git :Gstatus<CR>
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>F :Ag 
 nnoremap <Leader>t :NERDTreeToggle<CR>
+nnoremap <Leader>T :NERDTreeFind<CR>
 nnoremap <Leader>wq :wq!<CR>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>l :noh<CR>
 nmap <leader>w :w!<CR>
 nnoremap j gj
 nnoremap k gk
@@ -138,4 +138,6 @@ function Run()
   exec "! node %"
 endfunction
 " GD (uppercase) from an imported variable to go to the file that defines it
-nnoremap GF gd/'<CR>gf
+nnoremap GF gd/'<CR>:noh<CR>gf
+" <Ctrl-l> redraws the screen and removes any search highlighting
+nnoremap <silent> <C-l> :nohl<CR><C-l>
