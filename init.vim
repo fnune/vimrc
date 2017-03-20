@@ -123,8 +123,6 @@ nnoremap <Leader>T :NERDTreeFind<CR>
 nnoremap <Leader>wq :wq!<CR>
 nnoremap <Leader>q :q<CR>
 nmap <leader>w :w!<CR>
-nnoremap <Leader>> :bn<CR>
-nnoremap <Leader>< :bp<CR>
 nnoremap j gj
 nnoremap k gk
 map 0 ^
@@ -143,3 +141,9 @@ endfunction
 nnoremap GF gd/'<CR>:noh<CR>gf
 " <Ctrl-l> redraws the screen and removes any search highlighting
 nnoremap <silent> <C-l> :nohl<CR><C-l>
+" <Ctrl-u> and <Ctrl-d> also center the screen
+nnoremap <silent> <C-u> <C-u>zz
+nnoremap <silent> <C-d> <C-d>zz
+" Comfy mappings for buffer-previous and buffer-next
+nnoremap <silent> <Leader>> :bn<CR>
+nnoremap <silent> <Leader>< :bp<CR>
