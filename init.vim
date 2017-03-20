@@ -19,6 +19,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'godlygeek/tabular'
+Plug 'sjl/gundo.vim'
 
 " Language-specific
 Plug 'pangloss/vim-javascript'
@@ -120,6 +121,7 @@ nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>F :Ag 
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>T :NERDTreeFind<CR>
+nnoremap <Leader>u :GundoToggle<CR>
 nnoremap <Leader>wq :wq!<CR>
 nnoremap <Leader>q :q<CR>
 nmap <leader>w :w!<CR>
