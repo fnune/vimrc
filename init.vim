@@ -123,6 +123,8 @@ nnoremap <Leader>T :NERDTreeFind<CR>
 nnoremap <Leader>wq :wq!<CR>
 nnoremap <Leader>q :q<CR>
 nmap <leader>w :w!<CR>
+nnoremap <Leader>> :bn<CR>
+nnoremap <Leader>< :bp<CR>
 nnoremap j gj
 nnoremap k gk
 map 0 ^
