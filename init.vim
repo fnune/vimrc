@@ -20,6 +20,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'godlygeek/tabular'
 Plug 'sjl/gundo.vim'
+Plug 'rhysd/rust-doc.vim'
 
 " Language-specific
 Plug 'pangloss/vim-javascript'
