@@ -21,6 +21,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'godlygeek/tabular'
 Plug 'sjl/gundo.vim'
 Plug 'rhysd/rust-doc.vim'
+Plug 'junegunn/vim-peekaboo'
 
 " Language-specific
 Plug 'pangloss/vim-javascript'
