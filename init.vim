@@ -94,7 +94,6 @@ let g:user_emmet_settings = {
 let g:ale_sign_column_always=1
 let g:ale_sign_error = '*>'
 let g:ale_sign_warning = '*>'
-let g:ale_linters = {'rust': ['rustc']}
 " FZF - Use silversearcher, also ignores .gitignored files
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 set grepprg=ag\ --vimgrep
