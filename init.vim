@@ -36,6 +36,7 @@ Plug 'tpope/vim-endwise'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'mattn/emmet-vim'
+Plug 'quabug/vim-gdscript'
 
 call plug#end()
 
@@ -110,6 +111,8 @@ let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
 " Required for YCM installation
 let g:ycm_server_python_interpreter = '/usr/bin/python'
+" Godot script config
+autocmd Filetype gdscript setlocal noexpandtab nolisp autoindent shiftwidth=4
 
 " JavaScript
 let g:jsx_ext_required = 0
