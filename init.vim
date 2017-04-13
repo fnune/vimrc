@@ -129,9 +129,9 @@ nnoremap <Leader>F :Ag
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>T :NERDTreeFind<CR>
 nnoremap <Leader>u :GundoToggle<CR>
-nnoremap <Leader>wq :wq!<CR>
+nnoremap <Leader>zz :wq!<CR>
 nnoremap <Leader>q :q<CR>
-nmap <leader>w :w!<CR>
+nnoremap <leader>w :w!<CR>
 nnoremap j gj
 nnoremap k gk
 map 0 ^
