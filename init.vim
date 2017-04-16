@@ -44,7 +44,7 @@ call plug#end()
 syntax enable
 set termguicolors
 set laststatus=2
-colorscheme base16-default-dark
+colorscheme base16-onedark
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 highlight Comment cterm=italic gui=italic
@@ -131,7 +131,7 @@ nnoremap <Leader>T :NERDTreeFind<CR>
 nnoremap <Leader>u :GundoToggle<CR>
 nnoremap <Leader>wq :wq!<CR>
 nnoremap <Leader>q :q<CR>
-nmap <leader>w :w!<CR>
+nnoremap <leader>w :w!<CR>
 nnoremap j gj
 nnoremap k gk
 map 0 ^
