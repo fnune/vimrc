@@ -132,6 +132,8 @@ nnoremap <Leader>u :GundoToggle<CR>
 nnoremap <Leader>zz :wq!<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <leader>w :w!<CR>
+nnoremap <leader>b :Buffers<CR>
+imap <c-x><c-l> <plug>(fzf-complete-line)
 nnoremap j gj
 nnoremap k gk
 map 0 ^
