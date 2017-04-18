@@ -129,9 +129,9 @@ nnoremap <Leader>F :Ag
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>T :NERDTreeFind<CR>
 nnoremap <Leader>u :GundoToggle<CR>
-nnoremap <Leader>zz :wq!<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <leader>w :w!<CR>
+nnoremap <Leader>wq :wq!<CR>
 nnoremap <leader>b :Buffers<CR>
 imap <c-x><c-l> <plug>(fzf-complete-line)
 nnoremap j gj
