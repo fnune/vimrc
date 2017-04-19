@@ -138,6 +138,8 @@ nnoremap j gj
 nnoremap k gk
 map 0 ^
 command W w !sudo tee % > /dev/null
+" Visual select last pasted text
+nnoremap gp `[v`]
 " Move a line of text using ALT+[jk]
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
