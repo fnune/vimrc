@@ -129,13 +129,17 @@ nnoremap <Leader>F :Ag
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>T :NERDTreeFind<CR>
 nnoremap <Leader>u :GundoToggle<CR>
-nnoremap <Leader>wq :wq!<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <leader>w :w!<CR>
+nnoremap <Leader>wq :wq!<CR>
+nnoremap <leader>b :Buffers<CR>
+imap <c-x><c-l> <plug>(fzf-complete-line)
 nnoremap j gj
 nnoremap k gk
 map 0 ^
 command W w !sudo tee % > /dev/null
+" Visual select last pasted text
+nnoremap gp `[v`]
 " Move a line of text using ALT+[jk]
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
