@@ -22,6 +22,7 @@ Plug 'godlygeek/tabular'
 Plug 'sjl/gundo.vim'
 Plug 'rhysd/rust-doc.vim'
 Plug 'junegunn/vim-peekaboo'
+Plug 'kyuhi/vim-emoji-complete'
 
 " Language-specific
 Plug 'pangloss/vim-javascript'
