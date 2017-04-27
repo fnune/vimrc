@@ -2,13 +2,13 @@ call plug#begin()
 
 Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --racer-completer --clang-completer' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'ajh17/VimCompletesMe'
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'Shougo/neoinclude.vim'
@@ -88,6 +88,10 @@ set splitbelow
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" Autochdir on insert mode, restore on mode change
+:autocmd InsertEnter * let save_cwd = getcwd() | set autochdir
+:autocmd InsertLeave * set noautochdir | execute 'cd' fnameescape(save_cwd)
+
 " Plugin-specific configuration
 " Emmet for vim - jsx specifics
 let g:user_emmet_settings = {
@@ -108,8 +112,6 @@ let NERDSpaceDelims=1
 " Navigate between linter errors with CTRL+[jk]
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-" YouCompleteMe
-set completeopt-=preview
 " Markdown preview
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
