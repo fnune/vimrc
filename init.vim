@@ -120,6 +120,10 @@ let g:ycm_server_python_interpreter = '/usr/bin/python'
 " Godot script config
 autocmd Filetype gdscript setlocal noexpandtab nolisp autoindent shiftwidth=4
 
+" Configure ALE for rust linting
+let g:ale_rust_ignore_error_codes = [] " Using rustc for linting ignores other project files, so we ignore that type of errors
+let g:ale_linters = {'rust': ['rustc']} " Using cargo for linting blocks other cargo instances
+
 " JavaScript
 let g:jsx_ext_required = 0
 
