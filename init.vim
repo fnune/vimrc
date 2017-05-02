@@ -104,6 +104,10 @@ let g:user_emmet_settings = {
 let g:ale_sign_column_always=1
 let g:ale_sign_error = '*>'
 let g:ale_sign_warning = '*>'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" Configure ALE for rust linting
+let g:ale_rust_ignore_error_codes = ['E0433', 'E0405', 'E0432', 'E0463', 'E0469'] " Using rustc for linting ignores other project files, so we ignore that type of errors
+let g:ale_linters = {'rust': ['rustc']} " Using cargo for linting blocks other cargo instances
 " FZF - Use silversearcher, also ignores .gitignored files
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 set grepprg=ag\ --vimgrep
@@ -119,10 +123,6 @@ let vim_markdown_preview_github=1
 let g:ycm_server_python_interpreter = '/usr/bin/python'
 " Godot script config
 autocmd Filetype gdscript setlocal noexpandtab nolisp autoindent shiftwidth=4
-
-" Configure ALE for rust linting
-let g:ale_rust_ignore_error_codes = [] " Using rustc for linting ignores other project files, so we ignore that type of errors
-let g:ale_linters = {'rust': ['rustc']} " Using cargo for linting blocks other cargo instances
 
 " JavaScript
 let g:jsx_ext_required = 0
