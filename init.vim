@@ -167,3 +167,12 @@ nnoremap <silent> <C-d> <C-d>zz
 " Comfy mappings for buffer-previous and buffer-next
 nnoremap <silent> <Leader>> :bn<CR>
 nnoremap <silent> <Leader>< :bp<CR>
+" Open the corresponding .spec.js file in the same folder
+" or create it if it doesn't exist
+function OpenSpec()
+  let l:path = expand("%")
+  let l:spec = substitute(l:path, ".js", ".spec.js", "")
+  exec "vsplit "l:spec
+endfunction
+map <F12> :call OpenSpec() <cr>
+
