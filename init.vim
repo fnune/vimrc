@@ -1,43 +1,33 @@
 call plug#begin()
 
-Plug 'w0rp/ale'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'chriskempson/base16-vim'
-Plug 'tpope/vim-repeat'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ajh17/VimCompletesMe'
+Plug 'chriskempson/base16-vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'justinmk/vim-sneak'
-Plug 'Shougo/neoinclude.vim'
+Plug 'kyuhi/vim-emoji-complete'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'jiangmiao/auto-pairs'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'godlygeek/tabular'
-Plug 'sjl/gundo.vim'
-Plug 'rhysd/rust-doc.vim'
-Plug 'junegunn/vim-peekaboo'
-Plug 'kyuhi/vim-emoji-complete'
+Plug 'w0rp/ale'
 
 " Language-specific
-Plug 'pangloss/vim-javascript'
-Plug 'ap/vim-css-color'
-Plug 'mxw/vim-jsx'
-Plug 'matchit.zip'
-Plug 'JulesWang/css.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-endwise'
-Plug 'neovimhaskell/haskell-vim'
+Plug 'JulesWang/css.vim'
+Plug 'ap/vim-css-color'
+Plug 'matchit.zip'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'rhysd/rust-doc.vim'
 Plug 'rust-lang/rust.vim'
-Plug 'mattn/emmet-vim'
-Plug 'quabug/vim-gdscript'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 
 call plug#end()
 
@@ -121,8 +111,6 @@ let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
 " Required for YCM installation
 let g:ycm_server_python_interpreter = '/usr/bin/python'
-" Godot script config
-autocmd Filetype gdscript setlocal noexpandtab nolisp autoindent shiftwidth=4
 
 " JavaScript
 let g:jsx_ext_required = 0
