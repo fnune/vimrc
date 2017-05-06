@@ -2,7 +2,7 @@ call plug#begin()
 
 Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-repeat'
