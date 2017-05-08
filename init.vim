@@ -131,7 +131,7 @@ vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
 nnoremap <Leader>f :FZF<CR>
-nnoremap <Leader>F :Rg 
+nnoremap <Leader>F :Ag 
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>T :NERDTreeFind<CR>
 nnoremap <Leader>q :q<CR>
