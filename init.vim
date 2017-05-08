@@ -150,10 +150,8 @@ nnoremap gp `[v`]
 "***** CUSTOM COMMANDS ******"
 " Save as super user even if vim was opened as regular user
 command W w !sudo tee % > /dev/null
-" Use <C-L> to clear the highlighting of :set hlsearch.
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
-endif
+" Use <Leader>l to clear the highlighting of :set hlsearch.
+nnoremap <silent> <Leader>l :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 " Press F7 to run JS code on node and show it in a buffer
 map <F7> :call Run() <cr>
 function Run()
