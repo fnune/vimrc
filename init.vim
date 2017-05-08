@@ -5,6 +5,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'kyuhi/vim-emoji-complete'
@@ -104,9 +105,12 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 " Configure ALE for rust linting
 let g:ale_rust_ignore_error_codes = ['E0433', 'E0405', 'E0432', 'E0463', 'E0469'] " Using rustc for linting ignores other project files, so we ignore that type of errors
 let g:ale_linters = {'rust': ['rustc']} " Using cargo for linting blocks other cargo instances
-" FZF - Use silversearcher, also ignores .gitignored files
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-set grepprg=ag\ --vimgrep
+" FZF - Use ripgrep, also ignores .gitignored files
+let $FZF_DEFAULT_COMMAND = 'rg --files -g ""'
+if executable("rg")
+    set grepprg=rg\ --vimgrep\ --no-heading
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
 " Navigate between linter errors with CTRL+[jk]
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -127,7 +131,7 @@ vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
 nnoremap <Leader>f :FZF<CR>
-nnoremap <Leader>F :Ag 
+nnoremap <Leader>F :Rg 
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>T :NERDTreeFind<CR>
 nnoremap <Leader>q :q<CR>
