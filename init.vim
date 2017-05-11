@@ -102,9 +102,9 @@ let g:ale_sign_column_always=1
 let g:ale_sign_error = '*>'
 let g:ale_sign_warning = '*>'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-" Configure ALE for rust linting
-let g:ale_rust_ignore_error_codes = ['E0433', 'E0405', 'E0432', 'E0463', 'E0469'] " Using rustc for linting ignores other project files, so we ignore that type of errors
-let g:ale_linters = {'rust': ['rustc']} " Using cargo for linting blocks other cargo instances
+" Disable rust linting on ALE - It either blocks cargo or uses rustc which
+" ignores all files except for the current one
+let g:ale_linters = {'rust': []}
 " FZF - Use ripgrep, also ignores .gitignored files
 let $FZF_DEFAULT_COMMAND = 'rg --files -g ""'
 if executable("rg")
