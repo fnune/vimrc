@@ -166,7 +166,13 @@ endfunction
 function OpenSpec()
   let l:path = expand("%")
   let l:spec = substitute(l:path, ".js", ".spec.js", "")
-  exec "vsplit "l:spec
+  let l:test = substitute(l:path, ".js", ".test.js", "")
+  if filereadable(l:spec)
+    exec "vsplit "l:spec
+  endif
+  if filereadable(l:test)
+    exec "vsplit "l:test
+  endif
 endfunction
 map <F12> :call OpenSpec() <cr>
 
