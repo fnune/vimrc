@@ -162,7 +162,6 @@ function Run()
   exec "! node %"
 endfunction
 " Open the corresponding .spec.js file in the same folder
-" or create it if it doesn't exist
 function OpenSpec()
   let l:path = expand("%")
   let l:spec = substitute(l:path, ".js", ".spec.js", "")
