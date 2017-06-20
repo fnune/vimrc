@@ -112,9 +112,6 @@ if executable("rg")
     set grepprg=rg\ --vimgrep\ --no-heading
     set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
-" Navigate between linter errors with CTRL+[jk]
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " Markdown preview
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
@@ -151,6 +148,9 @@ nnoremap <silent> <Leader>< :bp<CR>
 nnoremap GF gd/'<CR>:noh<CR>gf
 " Visual select last pasted text
 nnoremap gp `[v`]
+" Navigate between linter errors with Leader [jk]
+nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
+nmap <silent> <Leader>j <Plug>(ale_next_wrap)
 
 "***** CUSTOM COMMANDS ******"
 " Save as super user even if vim was opened as regular user
