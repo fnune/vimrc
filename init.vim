@@ -15,8 +15,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 
 " Language-specific
@@ -40,8 +38,6 @@ set termguicolors
 set laststatus=2
 colorscheme base16-default-dark
 set encoding=utf-8
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 autocmd FileType nerdtree setlocal nolist
 " Make sure italics works
 let &t_ZH="\e[3m"
