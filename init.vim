@@ -3,7 +3,9 @@ call plug#begin()
 Plug 'ajh17/VimCompletesMe'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'daviesjamie/vim-base16-lightline'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -36,7 +38,11 @@ call plug#end()
 syntax enable
 set termguicolors
 set laststatus=2
+set noshowmode
 colorscheme base16-default-dark
+let g:lightline = {
+\ 'colorscheme': 'base16',
+\ }
 set encoding=utf-8
 autocmd FileType nerdtree setlocal nolist
 " Make sure italics works
