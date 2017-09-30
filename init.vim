@@ -25,9 +25,6 @@ Plug 'JulesWang/css.vim'
 Plug 'Quramy/tsuquyomi'
 Plug 'Shougo/vimproc.vim'
 Plug 'ap/vim-css-color'
-Plug 'leafgarland/typescript-vim'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'rhysd/rust-doc.vim'
 Plug 'rust-lang/rust.vim'
@@ -35,6 +32,12 @@ Plug 'tmhedberg/matchit'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
+
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
 
 call plug#end()
 
@@ -111,7 +114,11 @@ let g:ale_sign_warning = '*>'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 " Disable rust linting on ALE - It either blocks cargo or uses rustc which
 " ignores all files except for the current one
-let g:ale_linters = {'rust': []}
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['tslint'],
+\   'rust': [],
+\}
 " FZF - Use ripgrep, also ignores .gitignored files
 let $FZF_DEFAULT_COMMAND = 'rg --files -g ""'
 if executable("rg")
