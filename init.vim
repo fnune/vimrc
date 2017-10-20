@@ -144,6 +144,7 @@ nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>F :Ag<SPACE>
+nnoremap <Leader>R :Rg<SPACE>
 nnoremap <Leader>re :Rename<SPACE>
 nnoremap <Leader>mv :Move<SPACE>
 nnoremap <Leader>de :Delete<CR>
