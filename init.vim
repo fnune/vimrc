@@ -15,6 +15,7 @@ Plug 'machakann/vim-swap'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
@@ -142,7 +143,10 @@ vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
 nnoremap <Leader>f :FZF<CR>
-nnoremap <Leader>F :Ag 
+nnoremap <Leader>F :Ag<SPACE>
+nnoremap <Leader>re :Rename<SPACE>
+nnoremap <Leader>mv :Move<SPACE>
+nnoremap <Leader>de :Delete<CR>
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>T :NERDTreeFind<CR>
 nnoremap <Leader>q :q<CR>
