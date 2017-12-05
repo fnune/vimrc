@@ -96,6 +96,9 @@ set wrap
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" Open .tex.tera files with TeX syntax highlighting
+autocmd BufNewFile,BufRead *.tex.tera set syntax=tex
+
 " Autochdir on insert mode, restore on mode change
 :autocmd InsertEnter * let save_cwd = getcwd() | set autochdir
 :autocmd InsertLeave * set noautochdir | execute 'cd' fnameescape(save_cwd)
